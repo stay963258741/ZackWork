@@ -15,12 +15,6 @@ class AddressController extends Controller
         return view('addresses.create');
     }
 
-    public function show($hostname)
-    {
-        $address = Address::find($hostname);
-        return view('welcome', ['address' => $address]);
-    }
-
     public function guzzle()
     {
         $addresses = Address::all();

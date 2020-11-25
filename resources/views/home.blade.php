@@ -5,7 +5,7 @@
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
-                <div class="card-header">{{ __('網址新增專區') }}</div>
+                <div class="card-header">{{  Auth::user()->name .'  '.('您已登入，請點選新增') }}</div>
             </div>
 
             <a class="btn btn-primary"  type="button" style="margin-top: 2vh;width:10vw;"
