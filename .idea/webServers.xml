@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="WebServers">
+    <option name="servers">
+      <webServer id="350c0e2f-a4a1-4bba-b3b7-ea1aa234b242" name="monitor">
+        <fileTransfer rootFolder="/home/tianci" accessType="SFTP" host="18.181.255.128" port="22" sshConfigId="7f2c808e-a8a2-40b4-ad8b-45f38f756bc0" sshConfig="tianci@18.181.255.128:22 key" keyPair="true">
+          <advancedOptions>
+            <advancedOptions dataProtectionLevel="Private" passiveMode="true" shareSSLContext="true" />
+          </advancedOptions>
+        </fileTransfer>
+      </webServer>
+    </option>
+  </component>
+</project>
