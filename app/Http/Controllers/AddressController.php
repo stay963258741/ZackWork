@@ -23,14 +23,14 @@ class AddressController extends Controller
 
     public function guzzle()
     {
-        $rows = Address::all();
-        foreach ($rows as $row) {
-            $status = $this->get_status($row->hostname);
+        $addresses = Address::all();
+        foreach ($addresses as $address) {
+            $status = $this->get_status($address->hostname);
             if ($status) {
-                Address::where('hostname', '=', $row->hostname)
+                Address::where('hostname', '=', $address->hostname)
                     ->update(['status' => 1]);
             } else {
-                Address::where('hostname', '=', $row->hostname)
+                Address::where('hostname', '=', $address->hostname)
                     ->update(['status' => 0]);
             }
         }
