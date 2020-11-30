@@ -14,6 +14,7 @@ class CreateAddressesTable extends Migration
     public function up()
     {
         Schema::create('addresses', function (Blueprint $table) {
+            $table->id();
             $table->text('hostname');
             $table->boolean('status')->default(false);
             $table->timestamps();

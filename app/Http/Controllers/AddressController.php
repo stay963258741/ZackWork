@@ -14,46 +14,37 @@ class AddressController extends Controller
     {
         return view('addresses.create');
     }
-
-    public function guzzle()
+    public function store()
     {
+        $addresses = Address::updateOrCreate(
+            ['hostname' =>  request('hostname')]
+        );
+        $addresses->save();
+        $this->setStatus();
+        return redirect('/home');  //儲存後回到ＨＯＭＥ
+    }
+
+    private function setStatus(){
         $addresses = Address::all();
-        foreach ($addresses as $address) {
-            $status = $this->get_status($address->hostname);
-            if ($status) {
-                Address::where('hostname', '=', $address->hostname)
-                    ->update(['status' => 1]);
-            } else {
-                Address::where('hostname', '=', $address->hostname)
+        $client = new GuzzleHttp\Client;
+        foreach ($addresses as $address){
+            try {
+                $status = $client->get($address->hostname);
+                if ($status->getStatusCode() == 200){
+                    Address::where('hostname','=',$address->hostname)
+                        ->update(['status' => 1]);
+                }else{
+                    Address::where('hostname','=',$address->hostname)
+                        ->update(['status' => 0]);
+                }
+            }catch (\Exception $ex){
+                Address::where('hostname','=',$address->hostname)
                     ->update(['status' => 0]);
             }
         }
     }
 
-    public function get_status($url)
-    {
-        try {
-            $client = new GuzzleHttp\Client;
 
-            $status = $client->get($url);
-            if ($status->getStatusCode() == 200) {
-                return true;
-            } else {
-                return false;
-            }
-        } catch (\Exception $ex) {
-            return false;
-        }
-    }
-
-    public function store()
-    {
-        $addresses = new Address();
-        $addresses->hostname = request('hostname');
-        $addresses->save();
-        $this->guzzle();
-        return redirect('/home');  //儲存後回到ＨＯＭＥ
-    }
 
 }
 

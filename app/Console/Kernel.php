@@ -2,8 +2,10 @@
 
 namespace App\Console;
 
+use App\Models\Address;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
+use GuzzleHttp;
 
 class Kernel extends ConsoleKernel
 {
@@ -24,7 +26,26 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        // $schedule->command('inspire')->hourly();
+        $schedule->call(function() {
+            $addresses = Address::all();
+
+            foreach ($addresses as $address) {
+                try {
+                    $client = new GuzzleHttp\Client;
+                    $status = $client->get($address->hostname);
+                    if ($status->getStatusCode() == 200) {
+                        Address::where('hostname', '=', $address->hostname)
+                            ->update(['status' => 1]);
+                    } else {
+                        Address::where('hostname', '=', $address->hostname)
+                            ->update(['status' => 0]);
+                    }
+                } catch (\Exception $ex) {
+                    Address::where('hostname', '=', $address->hostname)
+                        ->update(['status' => 0]);
+                }
+            }
+        })->everyMinute();
     }
 
     /**

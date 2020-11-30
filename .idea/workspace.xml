@@ -24,9 +24,9 @@
   <component name="ChangeListManager">
     <list default="true" id="807c3191-6a54-49a3-bc01-8b712d448b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddressController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddressController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/home.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/home.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/welcome.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/welcome.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/database/migrations/2020_11_17_061504_create_addresses_table.php" beforeDir="false" afterPath="$PROJECT_DIR$/database/migrations/2020_11_17_061504_create_addresses_table.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -225,7 +225,8 @@
       <workItem from="1605522078582" duration="121170000" />
       <workItem from="1606271925149" duration="211000" />
       <workItem from="1606274148914" duration="2026000" />
-      <workItem from="1606277420245" duration="8559000" />
+      <workItem from="1606277420245" duration="13393000" />
+      <workItem from="1606374885765" duration="24693000" />
     </task>
     <servers />
   </component>
@@ -249,11 +250,12 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="641" y="375" key="#Composer/0.25.1680.936@0.25.1680.936" timestamp="1605522105287" />
-    <state x="440" y="155" key="#Deployment" timestamp="1606112983636">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state x="440" y="157" key="#Deployment" timestamp="1606704956886">
+      <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="440" y="155" key="#Deployment/0.25.1680.936@0.25.1680.936" timestamp="1606112983636" />
     <state x="440" y="155" key="#Deployment/0.25.1680.937@0.25.1680.937" timestamp="1605522551799" />
+    <state x="440" y="157" key="#Deployment/0.25.1680.950@0.25.1680.950" timestamp="1606704956886" />
     <state x="609" y="232" key="#HTTP_Proxy" timestamp="1605605917632">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
@@ -266,10 +268,15 @@
       <screen x="0" y="25" width="1680" height="937" />
     </state>
     <state x="424" y="142" key="#SSH_Configurations/0.25.1680.937@0.25.1680.937" timestamp="1605522407835" />
-    <state x="577" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1605617772584">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state x="440" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1606669744990">
+      <screen x="0" y="25" width="1680" height="950" />
+    </state>
+    <state x="440" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.950@0.25.1680.950" timestamp="1606669744990" />
+    <state x="577" y="255" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1606641859186">
+      <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="577" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.936@0.25.1680.936" timestamp="1605617772584" />
+    <state x="577" y="255" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.950@0.25.1680.950" timestamp="1606641859186" />
     <state width="819" height="222" key="GridCell.Tab.0.bottom" timestamp="1606270613725">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
@@ -298,11 +305,12 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="542" y="233" width="595" height="522" key="find.popup/0.25.1680.936@0.25.1680.936" timestamp="1605588000469" />
-    <state x="746" y="147" width="387" height="691" key="ftp.server.browser" timestamp="1605585829265">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state x="746" y="149" width="387" height="691" key="ftp.server.browser" timestamp="1606704942377">
+      <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="746" y="147" key="ftp.server.browser/0.25.1680.936@0.25.1680.936" timestamp="1605585829265" />
     <state x="746" y="147" width="387" height="691" key="ftp.server.browser/0.25.1680.937@0.25.1680.937" timestamp="1605522507926" />
+    <state x="746" y="149" key="ftp.server.browser/0.25.1680.950@0.25.1680.950" timestamp="1606704942377" />
     <state x="712" y="395" key="publish.login" timestamp="1605522362000">
       <screen x="0" y="25" width="1680" height="937" />
     </state>
@@ -311,9 +319,10 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="505" y="225" key="run.anything.popup/0.25.1680.936@0.25.1680.936" timestamp="1606209761032" />
-    <state x="505" y="231" width="670" height="676" key="search.everywhere.popup" timestamp="1606285803420">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup" timestamp="1606668198110">
+      <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1680.936@0.25.1680.936" timestamp="1606285803420" />
+    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1606668198110" />
   </component>
 </project>
