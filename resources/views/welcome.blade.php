@@ -426,6 +426,32 @@
             font-family: 'Nunito';
         }
     </style>
+
+    <style>
+        .b-red{
+            color:red;
+        }
+        .b-green{
+            color:green;
+        }
+        .span-red{
+            color:red;
+            display: block;
+            margin: -1.7rem 0 0 0;
+            padding: 0 1rem 0 0;
+            font-weight: 600;
+            text-align: right;
+        }
+        .span-green{
+            color:green;
+            display: block;
+            margin: -1.7rem 0 0 0;
+            padding: 0 1rem 0 0;
+            font-weight: 600;
+            text-align: right;
+        }
+    </style>
+
 </head>
 <body class="antialiased">
 <svg viewBox="0 0 651 192" fill="none" xmlns="http://www.w3.org/2000/svg"
@@ -451,40 +477,28 @@
     @endif
 
     <div class='dashboard'>
-
-
         <div class="server-list">
-            <slot></slot>
             @foreach($address as $addresses)
-                @if(  $addresses->status  != 1)
-                    <div class="server has-failed">
-                        <div class="server-icon fa fa-tasks ">
-                        </div>
-                        <ul class="server-details">
-                            <li><b style="color:red">Hostname:<span class="data"
-                                                                    style="color:red">{{ $addresses->hostname }}</span></b>
-                            </li>
-                            <li><b style="color:red">Status: <span class='data signal' style="color:red">Offline</span></b>
-                            </li>
-                            <li><b style="color:red">Address: <span class='data'
-                                                                    style="color:red">192.168.0.24</span></b></li>
-                        </ul>
-                    </div>
-                @else
-                    <div class="server has-succeed">
-                        <div class="server-icon fa fa-globe">
-                        </div>
-                        <ul class="server-details">
-                            <li><b style="color:green">Hostname:<span class="data"
-                                                                      style="color:green">{{ $addresses->hostname }}</span></b>
-                            </li>
-                            <li><b style="color:green">Status: <span class='data signal'
-                                                                     style="color:green">Online</span></b></li>
-                            <li><b style="color:green">Address:<span class='data'
-                                                                     style="color:green">192.168.0.25</span></b></li>
-                        </ul>
-                    </div>
-                @endif
+                <div class="server {{ $addresses->status ? 'has-succeed' : 'has-failed' }}">
+                    <div class="server-icon {{ $addresses->status ? 'fa fa-globe' : 'fa fa-tasks' }}"></div>
+                    <ul class="server-details">
+                        <li><b class="{{ $addresses->status ? 'b-green' : 'b-red' }}">Hostname:</b>
+                            <span class="{{ $addresses->status ? 'span-green' : 'span-red' }}">
+                                    {{ $addresses->hostname }}
+                                </span>
+                        </li>
+                        <li><b class="{{ $addresses->status ? 'b-green' : 'b-red' }}">Status: </b>
+                            <span class="data signal {{ $addresses->status ? 'span-green' : 'span-red' }}">
+                                    {{  $addresses->status ? 'Online' : 'Offline'}}
+                                </span>
+                        </li>
+                        <li><b class="{{ $addresses->status ? 'b-green' : 'b-red' }}">Address: </b>
+                            <span class="{{ $addresses->status ? 'span-green' : 'span-red' }}">
+                                    {{  $addresses->status ? '192.168.0.25' : '192.168.0.24'}}
+                                </span>
+                        </li>
+                    </ul>
+                </div>
             @endforeach
         </div>
     </div>
