@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Address;
 use GuzzleHttp;
-use Log;
+
 
 
 class AddressController extends Controller
@@ -14,38 +14,43 @@ class AddressController extends Controller
     {
         return view('addresses.create');
     }
+
     public function store()
     {
         $addresses = Address::updateOrCreate(
-            ['hostname' =>  request('hostname')]
+            ['hostname' => request('hostname')]
         );
         $addresses->save();
         $this->setStatus();
         return redirect('/home');  //儲存後回到ＨＯＭＥ
     }
 
-    private function setStatus(){
+    private function setStatus()
+    {
         $addresses = Address::all();
         $client = new GuzzleHttp\Client;
-        foreach ($addresses as $address){
+        foreach ($addresses as $address) {
             try {
                 $status = $client->get($address->hostname);
-                if ($status->getStatusCode() == 200){
-                    Address::where('hostname','=',$address->hostname)
+                if ($status->getStatusCode() == 200) {
+                    Address::where('hostname', '=', $address->hostname)
                         ->update(['status' => 1]);
-                }else{
-                    Address::where('hostname','=',$address->hostname)
+                } else {
+                    Address::where('hostname', '=', $address->hostname)
                         ->update(['status' => 0]);
                 }
-            }catch (\Exception $ex){
-                Address::where('hostname','=',$address->hostname)
+            } catch (\Exception $ex) {
+                Address::where('hostname', '=', $address->hostname)
                     ->update(['status' => 0]);
             }
         }
     }
 
-
-
+    public function destroy($id)
+    {
+        Address::where('id', $id)->delete();
+        return redirect('home');
+    }
 }
 
-;
+
