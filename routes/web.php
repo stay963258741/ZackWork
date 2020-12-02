@@ -2,6 +2,7 @@
 
 use App\Http\Controllers\AddressController;
 use App\Http\Controllers\HomeController;
+use App\Models\Address;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -21,6 +22,10 @@ Route::get('/', function () {
         ]);
 });
 
+Route::get('address', function () {
+    $addresses = Address::simplePaginate(10);
+    $addresses->withPath('home/url');
+});
 
 Route::get('address/create', [AddressController::class, 'create'])->name('addresses.create');
 

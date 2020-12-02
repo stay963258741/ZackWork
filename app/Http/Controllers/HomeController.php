@@ -24,7 +24,7 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $addresses=DB::table('addresses')->get();
+        $addresses=DB::table('addresses')->simplePaginate(10);
         return view('home', ['addresses' => $addresses]);
     }
 

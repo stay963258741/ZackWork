@@ -57,6 +57,9 @@
 
             </tbody>
         </table>
+        <div style="text-align: center;">
+            {{ $addresses->links() }}
+        </div>
     </div>
 
 @endsection
