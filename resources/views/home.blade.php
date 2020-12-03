@@ -34,7 +34,7 @@
                 <th scope="col">HOSTNAME</th>
                 <th scope="col">創建時間</th>
                 <th scope="col">更新時間</th>
-                <th scope="col">刪除</th>
+                <th scope="col"></th>
             </tr>
             </thead>
 
