@@ -46,7 +46,8 @@
                     <th>{{ $address->created_at }}</th>
                     <th>{{ $address->updated_at }}</th>
                     <th>
-                        <form method="POST" action="/address/{{ $address->id }}">
+
+                        <form method="POST" action="{{ route('addresses.destroy',['delete'=>$address->id]) }}">
                             @csrf
                             @method('DELETE')
                             <input class="btn btn-dark" type="submit" value="刪除">

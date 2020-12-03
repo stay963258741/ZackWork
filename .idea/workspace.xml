@@ -205,7 +205,7 @@
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="list.type.of.created.stylesheet" value="CSS" />
     <property name="nodejs_package_manager_path" value="npm" />
-    <property name="settings.editor.selected.configurable" value="preferences.sourceCode.PHP" />
+    <property name="settings.editor.selected.configurable" value="Configurable.PHP.Blade" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
@@ -258,7 +258,7 @@
       <workItem from="1606271925149" duration="211000" />
       <workItem from="1606274148914" duration="2026000" />
       <workItem from="1606277420245" duration="13393000" />
-      <workItem from="1606374885765" duration="38331000" />
+      <workItem from="1606374885765" duration="40377000" />
     </task>
     <task id="LOCAL-00001" summary="Set delete">
       <created>1606804153321</created>
@@ -354,10 +354,11 @@
     </state>
     <state x="599" y="162" key="RollbackChangesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1606271992583" />
     <state x="599" y="172" key="RollbackChangesDialog/0.25.1680.950@0.25.1680.950" timestamp="1606806386623" />
-    <state x="348" y="129" key="SettingsEditor" timestamp="1606118312791">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state x="348" y="131" key="SettingsEditor" timestamp="1606980548401">
+      <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="348" y="129" key="SettingsEditor/0.25.1680.936@0.25.1680.936" timestamp="1606118312791" />
+    <state x="348" y="131" key="SettingsEditor/0.25.1680.950@0.25.1680.950" timestamp="1606980548401" />
     <state x="440" y="233" key="Vcs.Push.Dialog.v2" timestamp="1606804162567">
       <screen x="0" y="25" width="1680" height="950" />
     </state>
@@ -380,10 +381,10 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="505" y="225" key="run.anything.popup/0.25.1680.936@0.25.1680.936" timestamp="1606209761032" />
-    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup" timestamp="1606883573274">
+    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup" timestamp="1606983906996">
       <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1680.936@0.25.1680.936" timestamp="1606285803420" />
-    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1606883573274" />
+    <state x="505" y="234" width="670" height="687" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1606983906996" />
   </component>
 </project>
