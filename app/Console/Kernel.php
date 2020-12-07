@@ -6,6 +6,7 @@ use App\Models\Address;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
 use GuzzleHttp;
+use Illuminate\Support\Facades\Http;
 
 class Kernel extends ConsoleKernel
 {
@@ -28,21 +29,20 @@ class Kernel extends ConsoleKernel
     {
         $schedule->call(function() {
             $addresses = Address::all();
-
-            foreach ($addresses as $address) {
+            foreach ($addresses as $address){
                 try {
-                    $client = new GuzzleHttp\Client;
-                    $status = $client->get($address->hostname);
-                    if ($status->getStatusCode() == 200) {
-                        Address::where('hostname', '=', $address->hostname)
-                            ->update(['status' => 1]);
-                    } else {
-                        Address::where('hostname', '=', $address->hostname)
-                            ->update(['status' => 0]);
+                    // $status = $client->get($address->hostname);   guzzle
+                    $status = Http::get($address->hostname);
+                    if ($status->status() == 200){
+                        $address->update(['status' => 1 ]);
+                    }else{
+                        if ($address->status == true) {
+                            Http::get('https://api.telegram.org/bot1422625730:AAEoBRxtV1xfZYjyrI8uL0bf0KKN4xK706w/sendMessage?chat_id=-476202703&text=網址錯誤');
+                        }
+                        $address->update(['status' => 0 ]);
                     }
-                } catch (\Exception $ex) {
-                    Address::where('hostname', '=', $address->hostname)
-                        ->update(['status' => 0]);
+                }catch (\Exception $ex){
+                    $address->update(['status' => 0 ]);
                 }
             }
         })->everyMinute();
