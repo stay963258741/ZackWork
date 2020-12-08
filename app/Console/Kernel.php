@@ -2,6 +2,7 @@
 
 namespace App\Console;
 
+use App\Jobs\BotJob;
 use App\Models\Address;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
@@ -37,9 +38,7 @@ class Kernel extends ConsoleKernel
                         $address->update(['status' => 1 ]);
                     }else{
                         if ($address->status == true) {
-                            $add =  $address->hostname ;
-                            $link = 'https://api.telegram.org/bot1422625730:AAEoBRxtV1xfZYjyrI8uL0bf0KKN4xK706w/sendMessage?chat_id=-476202703&text=網址錯誤或網站已關閉·請檢查:';
-                            Http::get($link.$add);
+                            @BotJob::dispatch();
                         }
                         $address->update(['status' => 0 ]);
                     }
