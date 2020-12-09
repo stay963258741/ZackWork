@@ -1,9 +1,8 @@
 @extends('layouts.app')
 
-
 @section('content')
     <div class="container">
-        <div class="row justify-content-center">
+        <div class="row justify-content-center" style="text-align: center">
             <div class="col-md-8">
                 <div class="card">
                     <div class="card-header">{{  Auth::user()->name .'  '.('您已登入，請點選新增') }}</div>
@@ -13,7 +12,6 @@
                     <a class="btn btn-primary" type="button" style="margin-top: 2vh;width:10vw;"
                        href="{{ route('addresses.create') }}">新增</a>
                 </div>
-
 
                 <div class="card-body">
                     @if (session('status'))
@@ -25,41 +23,36 @@
                 </div>
             </div>
 
-        </div>
-
-        <table class="table">
-            <thead class="thead-light">
-            <tr>
-                <th scope="col">編號</th>
-                <th scope="col">HOSTNAME</th>
-                <th scope="col">創建時間</th>
-                <th scope="col">更新時間</th>
-                <th scope="col"></th>
-            </tr>
-            </thead>
-
-            <tbody>
-            @foreach($addresses as $address)
+            <table class="table">
+                <thead class="thead-light">
                 <tr>
-                    <th scope="row">{{ $address->id }}</th>
-                    <th>{{ $address->hostname }}</th>
-                    <th>{{ $address->created_at }}</th>
-                    <th>{{ $address->updated_at }}</th>
-                    <th>
-
-                        <form method="POST" action="{{ route('addresses.destroy',['delete'=>$address->id]) }}">
-                            @csrf
-                            @method('DELETE')
-                            <input class="btn btn-dark" type="submit" value="刪除">
-                        </form>
-                    </th>
+                    <th scope="col">編號</th>
+                    <th scope="col">HOSTNAME</th>
+                    <th scope="col">創建時間</th>
+                    <th scope="col">更新時間</th>
+                    <th scope="col"></th>
                 </tr>
-            @endforeach
+                </thead>
 
-            </tbody>
-        </table>
-        <div style="text-align: center;">
-            {{ $addresses->links() }}
+                <tbody>
+                @foreach($addresses as $address)
+                    <tr>
+                        <th scope="row">{{ $address->id }}</th>
+                        <th>{{ $address->hostname }}</th>
+                        <th>{{ $address->created_at }}</th>
+                        <th>{{ $address->updated_at }}</th>
+                        <th>
+                            <form method="POST" action="{{ route('addresses.destroy',['delete'=>$address->id]) }}">
+                                @csrf
+                                @method('DELETE')
+                                <input class="btn btn-dark" type="submit" value="刪除">
+                            </form>
+                        </th>
+                    </tr>
+                @endforeach
+                </tbody>
+            </table>
+                {{ $addresses->links() }}
         </div>
     </div>
 

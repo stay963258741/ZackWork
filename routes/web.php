@@ -23,7 +23,7 @@ Route::get('/', function () {
 });
 
 Route::get('address', function () {
-    $addresses = Address::simplePaginate(10);
+    $addresses = Address::paginate(10);
     $addresses->withPath('home/url');
 });
 
