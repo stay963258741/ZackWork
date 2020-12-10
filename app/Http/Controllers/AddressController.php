@@ -57,6 +57,11 @@ class AddressController extends Controller
         Address::where('id', $id)->delete();
         return redirect('home');
     }
+
+    public function edit($id){
+        $address = Address::find($id);
+        return view('addresses.edit', compact('address'));
+    }
 }
 
 

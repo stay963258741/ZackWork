@@ -31,6 +31,7 @@
                     <th scope="col">創建時間</th>
                     <th scope="col">更新時間</th>
                     <th scope="col"></th>
+                    <th scope="col"></th>
                 </tr>
                 </thead>
 
@@ -41,6 +42,11 @@
                         <th>{{ $address->hostname }}</th>
                         <th>{{ $address->created_at }}</th>
                         <th>{{ $address->updated_at }}</th>
+                        <th>
+                            <a class="btn btn-dark" type="button"
+                               href="{{ route('addresses.edit',['id'=>$address->id]) }}">編輯
+                            </a>
+                        </th>
                         <th>
                             <form method="POST" action="{{ route('addresses.destroy',['delete'=>$address->id]) }}">
                                 @csrf
