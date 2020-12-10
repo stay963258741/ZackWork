@@ -30,9 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="807c3191-6a54-49a3-bc01-8b712d448b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Http/Controllers/AddressController.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Http/Controllers/AddressController.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/resources/views/addresses/edit.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/addresses/edit.blade.php" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -261,7 +259,7 @@
       <workItem from="1606274148914" duration="2026000" />
       <workItem from="1606277420245" duration="13393000" />
       <workItem from="1606374885765" duration="42122000" />
-      <workItem from="1607005970615" duration="17431000" />
+      <workItem from="1607005970615" duration="22601000" />
     </task>
     <task id="LOCAL-00001" summary="Set delete">
       <created>1606804153321</created>
@@ -334,9 +332,10 @@
       <screen x="0" y="25" width="1680" height="950" />
     </state>
     <state x="440" y="162" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.25.1680.950@0.25.1680.950" timestamp="1606669744990" />
-    <state x="577" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607412872388">
-      <screen x="0" y="25" width="1680" height="946" />
+    <state x="577" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1607585167513">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state x="577" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1680.1050@0.0.1680.1050" timestamp="1607585167513" />
     <state x="577" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.936@0.25.1680.936" timestamp="1605617772584" />
     <state x="577" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.946@0.25.1680.946" timestamp="1607412872388" />
     <state x="577" y="255" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.950@0.25.1680.950" timestamp="1607312079446" />
@@ -392,10 +391,10 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="505" y="225" key="run.anything.popup/0.25.1680.936@0.25.1680.936" timestamp="1606209761032" />
-    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup" timestamp="1607575489075">
-      <screen x="0" y="25" width="1680" height="946" />
+    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup" timestamp="1607585146754">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1607487532014" />
+    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1607585146754" />
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1680.936@0.25.1680.936" timestamp="1606285803420" />
     <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.25.1680.946@0.25.1680.946" timestamp="1607575489075" />
     <state x="505" y="234" width="670" height="687" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1607312052277" />

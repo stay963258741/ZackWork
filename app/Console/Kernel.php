@@ -2,12 +2,10 @@
 
 namespace App\Console;
 
-use App\Jobs\BotJob;
-use App\Models\Address;
+use App\Console\Commands\FetchHostStatus;
 use Illuminate\Console\Scheduling\Schedule;
 use Illuminate\Foundation\Console\Kernel as ConsoleKernel;
-use GuzzleHttp;
-use Illuminate\Support\Facades\Http;
+
 
 class Kernel extends ConsoleKernel
 {
@@ -17,7 +15,7 @@ class Kernel extends ConsoleKernel
      * @var array
      */
     protected $commands = [
-        //
+        FetchHostStatus::class
     ];
 
     /**
@@ -28,28 +26,7 @@ class Kernel extends ConsoleKernel
      */
     protected function schedule(Schedule $schedule)
     {
-        $schedule->call(function() {
-            $addresses = Address::all();
-            foreach ($addresses as $address){
-                try {
-                    // $status = $client->get($address->hostname);   guzzle
-                    $status = Http::get($address->hostname);
-                    if ($status->status() == 200){
-                        Address::where('hostname','=',$address->hostname)
-                            ->update(['status'=>1]);
-                    }else{
-                        if ($address->status == true) {
-                            @BotJob::dispatch();
-                        }
-                        Address::where('hostname','=',$address->hostname)
-                            ->update(['status'=>0]);
-                    }
-                }catch (\Exception $ex){
-                    Address::where('hostname','=',$address->hostname)
-                        ->update(['status'=>0]);
-                }
-            }
-        })->everyMinute();
+        $schedule->command('fetch:host-status')->everyMinute();
     }
 
     /**
