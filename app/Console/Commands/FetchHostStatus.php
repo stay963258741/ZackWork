@@ -44,10 +44,8 @@ class FetchHostStatus extends Command
         $addresses = Address::all();
         foreach ($addresses as $address) {
             try {
-                // $status = $client->get($address->hostname);   guzzle
                 $status = Http::get($address->hostname);
-
-                $this->info(sprintf('%s | status %s',$address->hostname,$status->status()));
+                 //$this->info(sprintf('%s | status %s',$address->hostname,$status->status()));  測試排成用
 
                 if ($status->status() == 200) {
                     Address::where('hostname', '=', $address->hostname)

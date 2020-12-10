@@ -30,7 +30,7 @@
   <component name="ChangeListManager">
     <list default="true" id="807c3191-6a54-49a3-bc01-8b712d448b9a" name="Default Changelist" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/app/Console/Kernel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Kernel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Console/Commands/FetchHostStatus.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Console/Commands/FetchHostStatus.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -259,7 +259,7 @@
       <workItem from="1606274148914" duration="2026000" />
       <workItem from="1606277420245" duration="13393000" />
       <workItem from="1606374885765" duration="42122000" />
-      <workItem from="1607005970615" duration="22601000" />
+      <workItem from="1607005970615" duration="23632000" />
     </task>
     <task id="LOCAL-00001" summary="Set delete">
       <created>1606804153321</created>
@@ -307,10 +307,10 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="641" y="375" key="#Composer/0.25.1680.936@0.25.1680.936" timestamp="1605522105287" />
-    <state x="440" y="145" key="#Deployment" timestamp="1607572038178">
+    <state x="440" y="145" key="#Deployment" timestamp="1607592102852">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
-    <state x="440" y="145" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1607572038178" />
+    <state x="440" y="145" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1607592102852" />
     <state x="440" y="155" key="#Deployment/0.25.1680.936@0.25.1680.936" timestamp="1606112983636" />
     <state x="440" y="155" key="#Deployment/0.25.1680.937@0.25.1680.937" timestamp="1605522551799" />
     <state x="440" y="156" key="#Deployment/0.25.1680.946@0.25.1680.946" timestamp="1607497723889" />
