@@ -31,6 +31,8 @@ Route::get('address/create', [AddressController::class, 'create'])->name('addres
 
 Route::get('/address/{id}/edit', [AddressController::class, 'edit'])->name('addresses.edit');
 
+Route::put('/address/{id}', [AddressController::class, 'update'])->name('addresses.update');
+
 Route::post('address', [AddressController::class, 'store'])->name('addresses.store');
 
 Route::DELETE('address/{delete}',[AddressController::class, 'destroy'])->name('addresses.destroy');

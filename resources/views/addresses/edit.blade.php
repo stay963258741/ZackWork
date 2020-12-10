@@ -4,7 +4,7 @@
     <div id="wrapper">
         <div id="page" class="container">
 
-            <form method="POST" action="{{ route('addresses.edit',[$address->id]) }}">
+            <form method="POST" action="{{ route('addresses.update',[$address->id]) }}">
                 @csrf
                 @method('PUT')
 

@@ -62,6 +62,16 @@ class AddressController extends Controller
         $address = Address::find($id);
         return view('addresses.edit', compact('address'));
     }
+
+    public function update($id)
+    {
+        $address = Address::find($id);
+        $address->id = request('id');
+        $address->hostname = request('hostname');
+        $address->save();
+
+        return redirect()->route('home');
+    }
 }
 
 
