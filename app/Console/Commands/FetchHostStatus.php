@@ -52,7 +52,7 @@ class FetchHostStatus extends Command
                         ->update(['status' => 1]);
                 } else {
                     if ($address->status == true) {
-                        @BotJob::dispatch();
+                        BotJob::dispatch($address->hostname);
                     }
                     Address::where('hostname', '=', $address->hostname)
                         ->update(['status' => 0]);
