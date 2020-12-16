@@ -29,7 +29,10 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="807c3191-6a54-49a3-bc01-8b712d448b9a" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/laravel-idea.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/laravel-idea.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Jobs/BotJob.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Jobs/BotJob.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -77,6 +80,9 @@
         </option>
       </ProjectWorkspaceSettings>
     </option>
+  </component>
+  <component name="PackageJsonUpdateNotifier">
+    <dismissed value="$PROJECT_DIR$/package.json" />
   </component>
   <component name="PhpWorkspaceProjectConfiguration">
     <include_path>
@@ -240,8 +246,8 @@
     </configuration>
     <recent_temporary>
       <list>
-        <item itemvalue="npm.dev" />
         <item itemvalue="npm.development" />
+        <item itemvalue="npm.dev" />
       </list>
     </recent_temporary>
   </component>
@@ -258,7 +264,11 @@
       <workItem from="1606274148914" duration="2026000" />
       <workItem from="1606277420245" duration="13393000" />
       <workItem from="1606374885765" duration="42122000" />
-      <workItem from="1607005970615" duration="31412000" />
+      <workItem from="1607005970615" duration="32250000" />
+      <workItem from="1608035555955" duration="83000" />
+      <workItem from="1608035657098" duration="66000" />
+      <workItem from="1608035739450" duration="1366000" />
+      <workItem from="1608039898337" duration="1821000" />
     </task>
     <task id="LOCAL-00001" summary="Set delete">
       <created>1606804153321</created>
@@ -306,18 +316,26 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="641" y="375" key="#Composer/0.25.1680.936@0.25.1680.936" timestamp="1605522105287" />
-    <state x="440" y="145" key="#Deployment" timestamp="1608024124403">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="440" y="156" key="#Deployment" timestamp="1608040226357">
+      <screen x="0" y="25" width="1680" height="946" />
     </state>
     <state x="440" y="145" key="#Deployment/0.0.1680.1050@0.0.1680.1050" timestamp="1608024124403" />
     <state x="440" y="155" key="#Deployment/0.25.1680.936@0.25.1680.936" timestamp="1606112983636" />
     <state x="440" y="155" key="#Deployment/0.25.1680.937@0.25.1680.937" timestamp="1605522551799" />
-    <state x="440" y="156" key="#Deployment/0.25.1680.946@0.25.1680.946" timestamp="1607497723889" />
+    <state x="440" y="156" key="#Deployment/0.25.1680.946@0.25.1680.946" timestamp="1608040226357" />
     <state x="440" y="157" key="#Deployment/0.25.1680.950@0.25.1680.950" timestamp="1606704956886" />
     <state x="609" y="232" key="#HTTP_Proxy" timestamp="1605605917632">
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="609" y="232" key="#HTTP_Proxy/0.25.1680.936@0.25.1680.936" timestamp="1605605917632" />
+    <state x="441" y="209" key="#Illuminated_Cloud" timestamp="1608035683540">
+      <screen x="0" y="0" width="1680" height="1050" />
+    </state>
+    <state x="441" y="209" key="#Illuminated_Cloud/0.0.1680.1050@0.0.1680.1050" timestamp="1608035683540" />
+    <state x="570" y="330" key="#Notifications" timestamp="1608040395439">
+      <screen x="0" y="25" width="1680" height="946" />
+    </state>
+    <state x="570" y="330" key="#Notifications/0.25.1680.946@0.25.1680.946" timestamp="1608040395439" />
     <state x="470" y="135" key="#Options" timestamp="1607497394472">
       <screen x="0" y="0" width="1680" height="1050" />
     </state>
@@ -338,22 +356,30 @@
     <state x="577" y="252" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.936@0.25.1680.936" timestamp="1605617772584" />
     <state x="577" y="254" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.946@0.25.1680.946" timestamp="1607412872388" />
     <state x="577" y="255" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.25.1680.950@0.25.1680.950" timestamp="1607312079446" />
-    <state width="819" height="222" key="GridCell.Tab.0.bottom" timestamp="1606270613725">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom" timestamp="1608035797625">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.bottom/0.0.1680.1050@0.0.1680.1050" timestamp="1608035797625" />
     <state width="819" height="222" key="GridCell.Tab.0.bottom/0.25.1680.936@0.25.1680.936" timestamp="1606270613725" />
-    <state width="819" height="222" key="GridCell.Tab.0.center" timestamp="1606270613724">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state width="1636" height="279" key="GridCell.Tab.0.center" timestamp="1608035797623">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.center/0.0.1680.1050@0.0.1680.1050" timestamp="1608035797623" />
     <state width="819" height="222" key="GridCell.Tab.0.center/0.25.1680.936@0.25.1680.936" timestamp="1606270613724" />
-    <state width="819" height="222" key="GridCell.Tab.0.left" timestamp="1606270613723">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state width="1636" height="279" key="GridCell.Tab.0.left" timestamp="1608035797623">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.left/0.0.1680.1050@0.0.1680.1050" timestamp="1608035797623" />
     <state width="819" height="222" key="GridCell.Tab.0.left/0.25.1680.936@0.25.1680.936" timestamp="1606270613723" />
-    <state width="819" height="222" key="GridCell.Tab.0.right" timestamp="1606270613725">
-      <screen x="0" y="25" width="1680" height="936" />
+    <state width="1636" height="279" key="GridCell.Tab.0.right" timestamp="1608035797624">
+      <screen x="0" y="0" width="1680" height="1050" />
     </state>
+    <state width="1636" height="279" key="GridCell.Tab.0.right/0.0.1680.1050@0.0.1680.1050" timestamp="1608035797624" />
     <state width="819" height="222" key="GridCell.Tab.0.right/0.25.1680.936@0.25.1680.936" timestamp="1606270613725" />
+    <state x="427" y="245" key="IDE.errors.dialog" timestamp="1608040539628">
+      <screen x="0" y="25" width="1680" height="946" />
+    </state>
+    <state x="427" y="245" key="IDE.errors.dialog/0.25.1680.946@0.25.1680.946" timestamp="1608040539628" />
     <state x="660" y="421" key="NewPhpFileDialog" timestamp="1607571515799">
       <screen x="0" y="25" width="1680" height="946" />
     </state>
@@ -391,12 +417,12 @@
       <screen x="0" y="25" width="1680" height="936" />
     </state>
     <state x="505" y="225" key="run.anything.popup/0.25.1680.936@0.25.1680.936" timestamp="1606209761032" />
-    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup" timestamp="1608023749974">
-      <screen x="0" y="0" width="1680" height="1050" />
+    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup" timestamp="1608040779556">
+      <screen x="0" y="25" width="1680" height="946" />
     </state>
     <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.0.1680.1050@0.0.1680.1050" timestamp="1608023749974" />
     <state x="505" y="231" width="670" height="676" key="search.everywhere.popup/0.25.1680.936@0.25.1680.936" timestamp="1606285803420" />
-    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.25.1680.946@0.25.1680.946" timestamp="1607575489075" />
+    <state x="505" y="233" width="670" height="685" key="search.everywhere.popup/0.25.1680.946@0.25.1680.946" timestamp="1608040779556" />
     <state x="505" y="234" width="670" height="687" key="search.everywhere.popup/0.25.1680.950@0.25.1680.950" timestamp="1607312052277" />
   </component>
 </project>
